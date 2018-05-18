@@ -36,15 +36,15 @@ for (i = 0; i < data.length; i++) {
     button.classList.add("btn-info");
     button.classList.add("btn-lg");
     button.setAttribute("data-toggle", "modal");
-   button.setAttribute("data-target", "#myModal");
-   var button_text = document.createTextNode("Get more information");
-   button.appendChild(button_text);
-   container.appendChild(button);
-   var modal = document.createElement("div");
-   modal.classList.add("modal");
+    button.setAttribute("data-target", "#myModal");
+    var button_text = document.createTextNode("Get more information");
+    button.appendChild(button_text);
+    container.appendChild(button);
+    var modal = document.createElement("div");
+    modal.classList.add("modal");
     modal.classList.add("fade");
-    modal.setAttribute("id","myModal");
-    modal.setAttribute("role","dialog");
+    modal.setAttribute("id", "myModal");
+    modal.setAttribute("role", "dialog");
     container.appendChild(modal);
     var modal_dialog = document.createElement("div");
     modal_dialog.classList.add("modal-dialog");
@@ -74,7 +74,7 @@ for (i = 0; i < data.length; i++) {
     button_footer.classList.add("btn");
     button_footer.classList.add("btn-default");
     button_footer.setAttribute("data-dismiss", "modal");
-    var button_footer_text =document.createTextNode("Close");
+    var button_footer_text = document.createTextNode("Close");
     button_footer.appendChild(button_footer_text);
     modal_footer.appendChild(button_footer);
 
@@ -82,10 +82,10 @@ for (i = 0; i < data.length; i++) {
 };
 
 
-function newItem(){
-	console.log("hello");
-	var newdiv = document.createElement("div");
-	newdiv.classList.add("col-lg-3");
+function newItem() {
+    console.log("hello");
+    var newdiv = document.createElement("div");
+    newdiv.classList.add("col-lg-3");
     newdiv.classList.add("col-md-4");
     newdiv.classList.add("col-sm-12");
     var dummy = document.getElementById("wrapper");
@@ -98,23 +98,20 @@ function newItem(){
     var img = document.createElement("img");
     img.setAttribute("id", "blah");
     thumbnail.appendChild(img);
-    function showimagepreview(input) 
-    {
-      if (input.files && input.files[0]) 
-      {
-        var filerdr = new FileReader();
-        filerdr.onload = function(e) {
-            $('#blah').attr('src', e.target.result);
-        };
-        filerdr.readAsDataURL(input.files[0]);
-      }
+
+    function showimagepreview(input) {
+        if (input.files && input.files[0]) {
+            var filerdr = new FileReader();
+            filerdr.onload = function(e) {
+                $('#blah').attr('src', e.target.result);
+            };
+            filerdr.readAsDataURL(input.files[0]);
+        }
     }
-   
+
 
 
 };
-
-  
 
 
 
